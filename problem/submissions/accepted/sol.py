@@ -3,7 +3,7 @@ from segmentTree import SegmentTree
 N, O = map(int, input().split())
 
 array = []
-array.extend(input().split())
+array.extend(map(int, input().split()))
 
 tree = SegmentTree(array, N)
 
