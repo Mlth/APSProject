@@ -8,6 +8,10 @@ array.extend(map(int, input().split()))
 
 calculations = defaultdict(int)
 powerOfTwos = []
+for i in range(1, N+1):
+    log2Calc = math.log2(i)
+    if(math.ceil(log2Calc) == math.floor(log2Calc)):
+        powerOfTwos.append(i - 1)
 
 minMode = False
 for i in range(O):
@@ -18,11 +22,6 @@ for i in range(O):
         array[fst-1] = snd
 
     elif(operationType == "min" and not minMode):
-        for i in range(1, N+1):
-            log2Calc = math.log2(i)
-            if(math.ceil(log2Calc) == math.floor(log2Calc)):
-                powerOfTwos.append(i - 1)
-
         for i in powerOfTwos:
             for a in range(N - i):
                 calculations[(a, a+i)] = min((array[gi] for gi in range(a, a+i)), default=array[a])
