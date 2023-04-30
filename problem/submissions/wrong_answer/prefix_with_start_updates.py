@@ -1,6 +1,10 @@
 import math
 from collections import defaultdict
 
+'''
+    This implementation works for input where all updates come before any min-query. Therefore, it should pass the first and second test groups but not the third one, since it does not update values after receiving the first min-query.
+'''
+
 N, O = map(int, input().split())
 
 array = []
