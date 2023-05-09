@@ -1,9 +1,8 @@
 import math
 
-N, O = map(int, input().split())
+N, O, S = map(int, input().split())
 
-array = []
-array.extend(map(int, input().split()))
+array = [S]*N
 
 for i in range(O):
     operation = input().split()

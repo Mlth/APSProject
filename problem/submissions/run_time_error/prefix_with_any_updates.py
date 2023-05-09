@@ -5,16 +5,15 @@ from collections import defaultdict
     This implementation calculates the prefix everytime it receives an update. This means that it becomes very slow. It should be able to pass the first test-group since that group does not contain much input. It should also be able to pass the second, but should get time-limit exceeded for the third test-group, since that test-group has mixed queries.
 '''
 
-N, O = map(int, input().split())
+N, O, S = map(int, input().split())
 
-array = []
-array.extend(map(int, input().split()))
+array = [S]*N
 
 calculations = defaultdict(int)
 def updateCalculations():
     for i in powerOfTwos:
         for a in range(N - i):
-            calculations[(a, a+i)] = min((array[gi] for gi in range(a, a+i)), default=array[a])
+            calculations[(a, a+i)] = min((array[gi] for gi in range(a, a+i+1)), default=array[a])
 
 powerOfTwos = []
 for i in range(1, N+1):
@@ -35,6 +34,7 @@ for i in range(O):
     elif (operationType == "min"):
         if not updated:
             updateCalculations()
+            updated = True
         largestPowerOfTwo = 2**((snd - fst + 1).bit_length() - 1)
         minValue = min(calculations[fst - 1, fst + largestPowerOfTwo - 1 - 1], calculations[snd - 1 - largestPowerOfTwo + 1, snd - 1])
         print(minValue)

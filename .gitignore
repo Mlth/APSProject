@@ -1,2 +1,3 @@
 _testdata_tools/
 **/data/secret
+node_modules/

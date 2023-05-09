@@ -1,11 +1,8 @@
-from segmentTree import SegmentTree
+from ..data_structures import SegmentTree
 
-N, O = map(int, input().split())
+N, O, S = map(int, input().split())
 
-array = []
-array.extend(map(int, input().split()))
-
-tree = SegmentTree(array, N)
+tree = SegmentTree(N, S)
 
 for i in range(O):
     operation = input().split()

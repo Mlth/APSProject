@@ -1,16 +1,9 @@
 import math
 
 class SegmentTree:
-    def __init__(self, array, N):
+    def __init__(self, N, S):
         self.N = N
-        self.tree = self.makeTree(array)
-
-    def makeTree(self, array):
-        tree = ([0]*self.N)
-        tree.extend(array)
-        for i in range(len(tree)-1, 1, -2):
-            tree[math.floor(i/2)] = min(tree[i], tree[i-1])
-        return tree
+        self.tree = [S]*self.N*2
     
     def min(self, start, end):
         start += self.N -1

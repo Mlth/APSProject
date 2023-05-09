@@ -5,10 +5,9 @@ from collections import defaultdict
     This implementation works for input where all updates come before any min-query. Therefore, it should pass the first and second test groups but not the third one, since it does not update values after receiving the first min-query.
 '''
 
-N, O = map(int, input().split())
+N, O, S = map(int, input().split())
 
-array = []
-array.extend(map(int, input().split()))
+array = [S]*N
 
 calculations = defaultdict(int)
 powerOfTwos = []
@@ -28,7 +27,7 @@ for i in range(O):
     elif(operationType == "min" and not minMode):
         for i in powerOfTwos:
             for a in range(N - i):
-                calculations[(a, a+i)] = min((array[gi] for gi in range(a, a+i)), default=array[a])
+                calculations[(a, a+i)] = min((array[gi] for gi in range(a, a+i+1)), default=array[a])
         minMode = True
         
     if(operationType == "min"):
