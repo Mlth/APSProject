@@ -1,3 +1,4 @@
+#! /usr/env/python3
 import math
 from collections import defaultdict
 

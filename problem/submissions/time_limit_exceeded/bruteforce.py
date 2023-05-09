@@ -1,3 +1,4 @@
+#! /usr/env/python3
 import math
 
 N, O, S = map(int, input().split())
