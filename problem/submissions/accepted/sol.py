@@ -39,7 +39,7 @@ for i in range(O):
     operation = input().split()
     operationType = operation[0]
     fst, snd = map(int, [operation[1], operation[2]])
-    if(operationType == "update"):
+    if(operationType == "quake"):
         tree.update(fst, snd)
-    elif(operationType == "min"):
+    elif(operationType == "expedition"):
         print(tree.min(fst, snd))

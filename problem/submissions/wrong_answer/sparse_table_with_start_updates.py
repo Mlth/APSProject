@@ -22,16 +22,16 @@ for i in range(O):
     operation = input().split()
     operationType = operation[0]
     fst, snd = map(int, [operation[1], operation[2]])
-    if(operationType == "update"):
+    if(operationType == "quake"):
         array[fst-1] = snd
 
-    elif(operationType == "min" and not minMode):
+    elif(operationType == "expedition" and not minMode):
         for i in powerOfTwos:
             for a in range(N - i):
                 calculations[(a, a+i)] = min((array[gi] for gi in range(a, a+i+1)), default=array[a])
         minMode = True
         
-    if(operationType == "min"):
+    if(operationType == "expedition"):
         largestPowerOfTwo = 2**((snd - fst + 1).bit_length() - 1)
         minValue = min(calculations[fst - 1, fst + largestPowerOfTwo - 1 - 1], calculations[snd - 1 - largestPowerOfTwo + 1, snd - 1])
         print(minValue)

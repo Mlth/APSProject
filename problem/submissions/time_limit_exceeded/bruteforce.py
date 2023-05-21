@@ -9,9 +9,9 @@ for i in range(O):
     operation = input().split()
     operationType = operation[0]
     fst, snd = map(int, [operation[1], operation[2]])
-    if(operationType == "update"):
+    if(operationType == "quake"):
         array[fst-1] = snd
-    elif(operationType == "min"):
+    elif(operationType == "expedition"):
         currentMin = math.inf
         for i in range(fst-1, snd):
             if (array[i] < currentMin):

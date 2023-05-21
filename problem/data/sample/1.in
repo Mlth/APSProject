@@ -1,6 +1,6 @@
 9 5 5
-update 2 -175
-update 4 3
-min 1 6
-min 3 4
-min 2 6
+quake 2 -175
+quake 4 3
+expedition 1 6
+expedition 3 4
+expedition 2 6

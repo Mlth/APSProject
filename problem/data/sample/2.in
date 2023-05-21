@@ -1,7 +1,7 @@
 6 6 789
-min 3 4
-update 3 -300
-min 3 4
-min 5 6
-update 4 -3002
-min 1 6
+expedition 3 4
+quake 3 -300
+expedition 3 4
+expedition 5 6
+quake 4 -3002
+expedition 1 6

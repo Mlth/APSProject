@@ -5,19 +5,20 @@
 
 import random
 
-N = 100000
-O = 150000
+N = 20000
+O = 75000
 S = 100
 
 print(N, O, S)
 
 #Update all values
-for i in range(1, 100001):
-    print("update", i, random.choice([random.randint(-10000, -1), random.randint(1, 10000)]))
+for i in range(1, N+1):
+    print("quake", i, random.choice([random.randint(-10000, -1), random.randint(1, 10000)]))
 
 #Quick check for the entire range
-print("min", 1, 100000)
+print("expedition", 1, N)
 #Random checks
-for i in range(100002, O+1):
-    points = sorted([random.randint(1, 100000), random.randint(1, 100000)])
-    print("min", points[0], points[1])
+for i in range(N+1, O):
+    start = random.randint(1, N-20)
+    end = start + 20
+    print("expedition", start, end)
