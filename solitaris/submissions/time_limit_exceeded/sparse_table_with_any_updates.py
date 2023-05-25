@@ -3,7 +3,7 @@ import math
 from collections import defaultdict
 
 '''
-    This implementation does the preprocessing everytime it receives an update. This means that it becomes very slow. It should be able to pass the first test-group since that group does not contain much input. It should also be able to pass the second, but should get time-limit exceeded for the third test-group, since that test-group has mixed queries.
+    This implementation does the preprocessing everytime it receives an update. This means that it becomes very slow. It should be able to pass the first test-group since that group does not contain much input. It should also be able to pass the second because it only has updates in the beginning, but should get time-limit exceeded for the third test-group, since that test-group has mixed queries.
 '''
 
 N, O, S = map(int, input().split())

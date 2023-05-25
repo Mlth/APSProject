@@ -8,7 +8,7 @@ assert re.match(r"((?:-?\d+ ?){3})", line), line
 
 N, O, S = map(int, line.split())
 assert 1 <= N <= 100000
-assert 1 <= O <= 125000
+assert 1 <= O <= 100000
 assert -10000 <= S <= 10000
 
 for i in range(O):

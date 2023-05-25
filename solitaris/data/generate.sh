@@ -31,14 +31,14 @@ tc random1ShortRanges generate_random 1000 1000 0 False 500 False True False
 tc random1OnlyPositiveShortRanges generate_random 1000 1000 10000 False 500 False True True
 
 # Group 2
-tc random2LongRanges generate_random 20000 125000 0 True 5000 True False False
-tc random2ShortRanges generate_random 20000 125000 0 True 5000 False True False
-tc random2OnlyPositiveShortRanges generate_random 20000 125000 10000 True 5000 False True True
+tc random2LongRanges generate_random 40000 100000 0 True 5000 True False False
+tc random2ShortRanges generate_random 40000 100000 0 True 5000 False True False
+tc random2OnlyPositiveShortRanges generate_random 40000 100000 10000 True 5000 False True True
 
 # Group 3
-tc random3RandomRanges generate_random 100000 125000 0 False 20000 False False False
-tc random3ShortRanges generate_random 100000 125000 0 False 20000 False True False
-tc random3OnlyPositiveShortRanges generate_random 100000 125000 10000 False 20000 False True True
+tc random3RandomRanges generate_random 100000 100000 0 False 20000 False False False
+tc random3ShortRanges generate_random 100000 100000 0 False 20000 False True False
+tc random3OnlyPositiveShortRanges generate_random 100000 100000 10000 False 20000 False True True
 
 # Manual test cases
 tc fullUpdate generate_full_update
